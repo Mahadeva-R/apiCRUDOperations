@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Mahadeva_R/IdeaProjects/apiAutomationPractice">
+        <classes>
+            <class name="org.epam.MultipleSetOfData">
+                <methods>
+                    <include name="validateCountry"/>
+                    <include name="validateCountryUsingPathParam"/>
+                </methods>
+            </class>
+            <class name="org.epam.ExtractDataTest">
+                <methods>
+                    <include name="validateCountry"/>
+                </methods>
+            </class>
+            <class name="org.epam.ExtractResponseTest">
+                <methods>
+                    <include name="validResponseInNormalWay"/>
+                    <include name="validateResponseUsingResponseObject"/>
+                    <include name="validateResponseUsingJsonPath"/>
+                    <include name="validateResponseUsingJSONObject"/>
+                </methods>
+            </class>
+            <class name="org.epam.CRUDOperationsTest">
+                <methods>
+                    <include name="createUserUsingMap"/>
+                    <include name="getUserData"/>
+                    <include name="updateUser"/>
+                    <include name="deleteUser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

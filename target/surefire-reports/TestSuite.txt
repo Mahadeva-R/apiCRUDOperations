@@ -1,0 +1,35 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 31.571 s <<< FAILURE! - in TestSuite
+testLogin(parallelTesting.TestClassOne)  Time elapsed: 0.148 s  <<< FAILURE!
+java.lang.NoSuchMethodError: com.google.common.collect.ImmutableMap.of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap;
+	at parallelTesting.TestClassOne.testLogin(TestClassOne.java:19)
+
+testLoginEdge(parallelTesting.TestClassOne)  Time elapsed: 6.602 s  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports msedge version 116
+Current browser version is 118.0.2088.61 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe 
+Host info: host: 'EPINHYDW0BF5', ip: '192.168.29.23'
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*], extensions: []}}]}]
+	at parallelTesting.TestClassOne.testLoginEdge(TestClassOne.java:41)
+
+testLoginFirefox(parallelTesting.TestClassOne)  Time elapsed: 19.73 s  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'EPINHYDW0BF5', ip: '192.168.29.23'
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}]}]
+	at parallelTesting.TestClassOne.testLoginFirefox(TestClassOne.java:30)
+Caused by: java.lang.NoSuchMethodError: com.google.common.collect.ImmutableMap.of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap;
+	at parallelTesting.TestClassOne.testLoginFirefox(TestClassOne.java:30)
+
+tearDown(parallelTesting.TestClassOne)  Time elapsed: 19.732 s  <<< FAILURE!
+java.lang.NullPointerException
+	at parallelTesting.TestClassOne.tearDown(TestClassOne.java:50)
+
